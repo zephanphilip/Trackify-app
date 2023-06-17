@@ -20,9 +20,10 @@ app.use("/api/add", expenseRouter);
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Serve the React app for any other route
-app.get('*', (req, res) => {
+app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
 
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://123:123@cluster0.pvpoxvw.mongodb.net/Cluster0?retryWrites=true&w=majority")
