@@ -79,7 +79,7 @@ router.delete("/profile/:id", (req, res) => {
 });
 
 
-
+module.exports = userRouter;
 
 // export { router as userRouter };
 

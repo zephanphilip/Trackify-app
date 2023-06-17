@@ -88,7 +88,7 @@ router.delete("/incomedel/:id", (req, res) => {
 });
 
 
-
+module.exports = incomeRouter;
 
 // export { router as incomeRouter };
 

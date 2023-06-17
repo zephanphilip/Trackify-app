@@ -8,9 +8,13 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use("/api/auth", require("./routes/users.js"));
-app.use("/api/add", require("./routes/income.js"));
-app.use("/api/add", require("./routes/expense.js"));
+const userRouter = require("./routes/users.js");
+const incomeRouter = require("./routes/income.js");
+const expenseRouter = require("./routes/expense.js");
+
+app.use("/api/auth", userRouter);
+app.use("/api/add", incomeRouter);
+app.use("/api/add", expenseRouter);
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'build')));

@@ -69,5 +69,5 @@ router.delete("/expensedel/:id", (req, res) => {
 
 
 
-
+module.exports = expenseRouter;
 // export { router as expenseRouter };
