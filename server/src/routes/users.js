@@ -83,7 +83,7 @@ router.delete("/profile/:id", (req, res) => {
 
 // export { router as userRouter };
 
-export const verifyToken = (req, res, next) => {
+const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (authHeader) {
     jwt.verify(authHeader, "secret", (err) => {
