@@ -21,8 +21,8 @@
 const express = require('express')
 const jwt = require('jsonwebtoken');
 const IncomeModel = require('../models/Income.js');
-import mongoose from 'mongoose';
-import { UserModel } from '../models/Users.js';
+// import mongoose from 'mongoose';
+// import { UserModel } from '../models/Users.js';
 
 const router = express.Router();
 
