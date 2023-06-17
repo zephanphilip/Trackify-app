@@ -1,10 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import {userRouter} from './routes/users.js';
-import {incomeRouter} from './routes/income.js';
-import { expenseRouter } from './routes/expense.js';
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
 const app = express();
+
 
 app.use(express.json());
 app.use(cors());

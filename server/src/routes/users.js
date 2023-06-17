@@ -1,9 +1,10 @@
-import express from "express";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+const express = require('express')
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const UserModel = require('../models/Users.js');
 
 const router = express.Router();
-import { UserModel } from "../models/Users.js";
+
 
 router.post("/register", async (req, res) => {
   const { username, password, ...rest } = req.body;

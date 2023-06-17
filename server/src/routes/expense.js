@@ -1,8 +1,7 @@
-import jwt from "jsonwebtoken";
-import express from 'express';
-import { ExpenseModel } from "../models/Expense.js";
-import mongoose from 'mongoose';
-import { UserModel } from '../models/Users.js';
+
+const express = require('express')
+const jwt = require('jsonwebtoken');
+const ExpenseModel = require('../models/Expense.js');
 
 const router = express.Router();
 

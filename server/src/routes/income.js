@@ -18,9 +18,9 @@
 
 
 // export {router as incomeRouter};
-import jwt from "jsonwebtoken";
-import express from 'express';
-import { IncomeModel } from "../models/Income.js";
+const express = require('express')
+const jwt = require('jsonwebtoken');
+const IncomeModel = require('../models/Income.js');
 import mongoose from 'mongoose';
 import { UserModel } from '../models/Users.js';
 
