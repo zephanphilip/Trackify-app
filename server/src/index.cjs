@@ -14,9 +14,9 @@ app.use(cors());
 // app.use("/add", incomeRouter);
 // app.use("/add", expenseRouter);
 
-app.use("/api/auth", require("./routes/users"));
-app.use("/api/add", require("./routes/income"));
-app.use("/api/add", require("./routes/expense"));
+app.use("/api/auth", require("./routes/users.js"));
+app.use("/api/add", require("./routes/income.js"));
+app.use("/api/add", require("./routes/expense.js"));
 
 
 app.use(express.static(path.join(__dirname,'/build')));
