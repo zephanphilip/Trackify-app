@@ -81,7 +81,7 @@ router.delete("/profile/:id", (req, res) => {
 
 
 
-export { router as userRouter };
+// export { router as userRouter };
 
 export const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization;

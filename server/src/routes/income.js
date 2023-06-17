@@ -90,14 +90,7 @@ router.delete("/incomedel/:id", (req, res) => {
 
 
 
-export { router as incomeRouter };
+// export { router as incomeRouter };
 
-// router.post('/', async (req, res) => {
-//     const recipie = new RecipieModel(req.body);
-//     try {
-//         const response = await recipie.save();
-//         res.json(response);
-//     } catch(err){
-//         res.json( err);
-//     }
-// })
+
+
