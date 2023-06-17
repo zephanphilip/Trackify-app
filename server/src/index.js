@@ -5,7 +5,6 @@ import {userRouter} from './routes/users.js';
 import {incomeRouter} from './routes/income.js';
 import { expenseRouter } from './routes/expense.js';
 const app = express();
-const path = require('path');
 
 app.use(express.json());
 app.use(cors());

@@ -14,10 +14,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./src/index.cjs",
-    "server": "nodemon ./src/index.cjs",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm start\" \"npm run client\" "
+    "start": "node ./src/index.js"
   },
   "author": "",
   "license": "ISC",
