@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true},
@@ -9,9 +9,8 @@ const UserSchema = new mongoose.Schema({
     education: { type: String, required: true},
     email: { type: String, required: true},
     password: { type: String, required: true},
-
-
-    // savedRecipies: [{ type: mongoose.Schema.Types.ObjectId, ref: "recipies"}],
 });
 
-export const UserModel = mongoose.model("users", UserSchema);
+const UserModel = mongoose.model("users", UserSchema);
+
+module.exports = UserModel;

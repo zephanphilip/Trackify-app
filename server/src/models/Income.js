@@ -1,9 +1,11 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const IncomeSchema = new mongoose.Schema({
     iamount: { type: Number, required: true},
     idescription: { type: String, required: true},
-    userOwner:{type:mongoose.Schema.Types.ObjectId, ref:"users", required:true},
+    userOwner: { type: mongoose.Schema.Types.ObjectId, ref: "users", required: true },
 });
 
-export const IncomeModel = mongoose.model("incomes", IncomeSchema);
+const IncomeModel = mongoose.model("incomes", IncomeSchema);
+
+module.exports = IncomeModel;

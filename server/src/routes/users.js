@@ -96,3 +96,4 @@ const verifyToken = (req, res, next) => {
     res.sendStatus(401);
   }
 };
+module.exports.verifyToken = verifyToken;
