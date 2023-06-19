@@ -63,10 +63,10 @@ userRouter.put("/profileupdate/:id", async (req, res) => {
   }
 });
 userRouter.put("/profileblock/:id", async (req, res) => {
-  const id = req.params.id;
+  const id = req.params;
 
   // Assuming you have a User model/schema defined
-  User.findByIdAndUpdate(id, { block: true }, { new: true })
+  UserModel.findByIdAndUpdate(id, { block: true }, { new: true })
     .then(user => {
       if (!user) {
         return res.status(404).json({ error: 'User not found' });
