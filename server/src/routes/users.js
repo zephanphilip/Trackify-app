@@ -71,6 +71,15 @@ userRouter.put("/profileblock/:id", async (req, res) => {
     res.json(err);
   }
 });
+userRouter.put("/profileunblock/:id", async (req, res) => {
+  try {
+  const { id }= req.params;
+  const unblockedProfile=await UserModel.findByIdAndUpdate(id, { block: false }, { new: true });
+  res.json(unblockedProfile);
+  } catch (err) {
+    res.json(err);
+  }
+});
 
 userRouter.delete("/profile/:id", (req, res) => {
   const { id } = req.params;
