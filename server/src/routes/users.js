@@ -63,20 +63,13 @@ userRouter.put("/profileupdate/:id", async (req, res) => {
   }
 });
 userRouter.put("/profileblock/:id", async (req, res) => {
-  const id = req.params;
-
-  // Assuming you have a User model/schema defined
-  UserModel.findByIdAndUpdate(id, { block: true }, { new: true })
-    .then(user => {
-      if (!user) {
-        return res.status(404).json({ error: 'User not found' });
-      }
-      res.json(user);
-    })
-    .catch(error => {
-      console.error(error);
-      res.status(500).json({ error: 'Internal server error' });
-    });
+  try {
+  const { id }= req.params;
+  const blockedProfile=await UserModel.findByIdAndUpdate(id, { block: true }, { new: true });
+  res.json(blockedProfile);
+  } catch (err) {
+    res.json(err);
+  }
 });
 
 userRouter.delete("/profile/:id", (req, res) => {
