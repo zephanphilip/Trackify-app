@@ -62,7 +62,7 @@ userRouter.put("/profileupdate/:id", async (req, res) => {
     res.json(err);
   }
 });
-userRouter.put("/profile/:id", async (req, res) => {
+userRouter.put("/profileblock/:id", async (req, res) => {
   const id = req.params.id;
 
   // Assuming you have a User model/schema defined
